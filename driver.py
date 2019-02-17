@@ -5,7 +5,7 @@ from gardnr import drivers, metrics
 
 class UsbWebCam(drivers.Sensor):
     def setup(self):
-        self.metric_name = 'webcam'
+        self.metric_name = 'webcam-image'
         self.image_file_name = 'image'
         self.image_file_extension = '.jpg'
 
@@ -16,7 +16,7 @@ class UsbWebCam(drivers.Sensor):
         )
 
         # create the image file from webcam
-        call(['fswebcam', full_file_name])
+        call(['fswebcam', '-S', '20', full_file_name])
 
         with open(full_file_name, 'rb') as image_file:
             image_bytes = image_file.read()
