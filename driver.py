@@ -5,7 +5,7 @@ from gardnr import drivers, metrics
 
 class UsbWebCam(drivers.Sensor):
     def setup(self):
-        self.metric_name = 'webcam-image'
+        self.metric_name = 'webcam'
         self.image_file_name = 'image'
         self.image_file_extension = '.jpg'
 
