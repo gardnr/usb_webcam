@@ -21,7 +21,7 @@ class UsbWebCam(drivers.Sensor):
         with open(full_file_name, 'rb') as image_file:
             image_bytes = image_file.read()
 
-        metrics.create_image_log(
+        metrics.create_file_log(
             self.metric_name,
             image_bytes,
             extension=self.image_file_extension
