@@ -9,5 +9,5 @@ sudo apt install fswebcam
 
 gardnr add metric air image webcam
 
-gardnr add driver webcam usb_webcam.driver:UsbWebCam
+gardnr add driver webcam usb_webcam.driver:UsbWebCam -c metric_name='webcam' device='/dev/video0' resolution='1920x1080'
 ```
